@@ -21,8 +21,12 @@ try:
     )
     client = gspread.authorize(creds)
     sheet = client.open("Data Kasir Studio").worksheet("Transaksi")
+except KeyError as e:
+    st.error("❌ Gagal mengakses kredensial: Kunci 'SERVICE_ACCOUNT' tidak ditemukan di secrets.toml. Pastikan secrets.toml dikonfigurasi dengan benar.")
+    st.exception(e)
+    st.stop()
 except Exception as e:
-    st.error("❌ Gagal mengautentikasi dengan Google Sheets. Periksa kredensial.")
+    st.error("❌ Gagal mengautentikasi dengan Google Sheets. Periksa kredensial atau izin spreadsheet.")
     st.exception(e)
     st.stop()
 
