@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "kasir-dory-ink",
+  "private_key_id": "21121e51113d9263f6d94582b845536f41e2db8c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCqa6oApEiVOg1M\niN3AQTdMalMHovMCNsnohVRmGwOhkED7ed7y8xYJ2w/2jOdPmCBsyFOzfhL+3bIh\nF/Cp62pZNLL19sxVsK4NduT71YZkh4ELBqs7ITH3X8FqSZ9KOEWo+KgoFlttmGWD\nmjButlMqtl8R9W0Gbl1lBKvhC85/xyPCpKkz9ywgs77gungSNpslgq8HntEdEiej\nvMtFhSVhFMmotmHrTIzXq0Gc491xoSL7yABydQXC8nY+/wmTeNuNhMc6VCUHJxy8\nTy8BQ4KZ/euX5bJJ/wLZjkGrz8KJLH2PPO1zs45jl+M1rEDzmcJtpi7WFdU9cadi\na8Ubgk0xAgMBAAECggEATKOzZat7ysQ7E9afJuUNOcu9ADurHi1Ges9vB6YRaXhm\niNEjTs279P2zfZSbN4O53UHvxlIlt8E6aMCL5dZtUqWs74koFkco1vxHeOtrD02S\n3kMHAUXp4w4IfMSUInwQ866zbKe1QSGeUWMncbqDxzsRoRFmkNRUIuhJZaD6IiLP\nwgWzVcdoAfHxVQy4VR14m2jxGKQQXBH20R08Ul3EMeUAao20ZPNgKsT5c8/aZ9ji\nhLVR5RWkMcMrNX+uzJkGlVFlHfCctUf4w5BX7h88BD6+WOEX/GIMjEBK5LZte/YJ\noAuKE/TPrVrpmVyAfITyKuursz36X2J45AdWz7wSEwKBgQDXSAaiCcF2zlaQ8ZS+\n0J2VVMAaM41Q1JPyjGc8i8xavqQwQ1ABjNuj6Bb2YEyYEY528FWsiXRaOMS6neiZ\nuadpfm/q+xbg4BI1M5Dsv52R5dvQFWA2u8l31dqgFGFuZXEW9GN/oNSXXTJ5Ref8\nwEGXERtRuq6Wp98MvxlIpFFmVwKBgQDKp3fYZRufHfqQa9FmfzJY4IHq/BekY9V7\nSXGTMY3TTURWL+xQ5LHhcV+3GQTRVzyXl7KQjYDZD1ZRnUi6BMoksYmAb9BrfQmR\nmAwPV+ehuc2PlKU5AecicLnn2CgfMdROrauskUmtKV6rY1aUgwAji5H3xQlF9tqE\nlqE/myXjtwKBgQCnRdWxjfb+wzDMConTAfGPmHxzX18MUUBrk+CbUNyGHd8hiQvf\nSH1ZC/rbkNOyzOFvVSqcl2kKuVVS02NqHrEP7Sg04shSDojXQav36KMcPAfh1Nof\nbSYLsOTgwTU7PCL0/QtanbLRsZ6IUGMDJrdQFACwLmd9tA5BrzKMGPEOnQKBgGzS\nMNDKumJfPsV+oBtiAi8nn5wHcsqbsW9aqNpZqcblnuSJJ2To6Xwd3T/891FSfv8I\nPqLQ2Xe1fKymwP7iw4mgrC2D3W9a3WCJPTCgC4oUtAV91JsgInWkArA0qpbVsyPs\nrlskSWPq6yMtXLiy/8gWknNyIuCnBgBcwondTiNRAoGAH8DV6bL1NMCHHArTpNk9\nC4yUxJ+wg/b5YwHdeNRycKyQQVkzljodRDNGv0NBCSQMg6XupgrGkxQbWl8DVe3n\nG+IXxgNzQoe8yPRvoSCY0FCS51MVZAN7Rm1f7yZv0gpLUFs3I71QZYd6V7z/9cNM\nTd0am0gX5hwL11WkSszPjrc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kasir-dory-ink@kasir-dory-ink.iam.gserviceaccount.com",
+  "client_id": "108729821196881968501",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kasir-dory-ink%40kasir-dory-ink.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
