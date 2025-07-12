@@ -6,18 +6,20 @@ import io
 from reportlab.lib.pagesizes import A5
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import cm
+import json
+import os
 
 # ===== KONFIGURASI GOOGLE API =====
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive"
 ]
-SERVICE_ACCOUNT_FILE = "/tmp/service_account.json"
-with open(SERVICE_ACCOUNT_FILE, "w") as f:
+
+# ===== LOAD SERVICE ACCOUNT DARI STREAMLIT SECRETS =====
+with open("/tmp/service_account.json", "w") as f:
     f.write(st.secrets["SERVICE_ACCOUNT"])
 
-# ===== AUTHENTIKASI =====
-creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+creds = Credentials.from_service_account_file("/tmp/service_account.json", scopes=SCOPES)
 client = gspread.authorize(creds)
 sheet = client.open("Data Kasir Studio").worksheet("Transaksi")
 
@@ -28,23 +30,15 @@ def buat_struk_pdf(nama, tanggal, item, payment, harga_format):
         c = canvas.Canvas(buffer, pagesize=A5)
         width, height = A5
 
-        # Header besar
         c.setFont("Helvetica-Bold", 22)
         c.drawCentredString(width / 2, height - 2 * cm, "DORY INK BALI")
-
-        # Garis horizontal
         c.setLineWidth(1)
         c.line(1 * cm, height - 2.3 * cm, width - 1 * cm, height - 2.3 * cm)
-
-        # Alamat dan kontak
         c.setFont("Helvetica", 10)
         c.drawCentredString(width / 2, height - 3.2 * cm, "Jl. Poppies Lane II, Kuta, Bali")
         c.drawCentredString(width / 2, height - 3.7 * cm, "Whats app : 0811-3982-040")
-
-        # Garis horizontal kedua
         c.line(1 * cm, height - 4.2 * cm, width - 1 * cm, height - 4.2 * cm)
 
-        # Konten utama
         c.setFont("Helvetica", 12)
         start_y = height - 5.5 * cm
         line_height = 1.2 * cm
@@ -64,18 +58,12 @@ def buat_struk_pdf(nama, tanggal, item, payment, harga_format):
         c.drawString(2 * cm, start_y - 4 * line_height, "Tattoo Price")
         c.drawRightString(width - 2 * cm, start_y - 4 * line_height, harga_format)
 
-        # Garis horizontal bawah
         c.line(1 * cm, start_y - 5 * line_height, width - 1 * cm, start_y - 5 * line_height)
 
-        # Footer
-        footer_text_1 = "Thank you for trusting us with your art"
-        footer_text_2 = "Instagram: @doryinkbali"
-        footer_text_3 = "Facebook : Dory Ink Bali"
-
         c.setFont("Helvetica-Oblique", 9)
-        c.drawCentredString(width / 2, start_y - 6 * line_height, footer_text_1)
-        c.drawCentredString(width / 2, start_y - 6.7 * line_height, footer_text_2)
-        c.drawCentredString(width / 2, start_y - 7.4 * line_height, footer_text_3)
+        c.drawCentredString(width / 2, start_y - 6 * line_height, "Thank you for trusting us with your art")
+        c.drawCentredString(width / 2, start_y - 6.7 * line_height, "Instagram: @doryinkbali")
+        c.drawCentredString(width / 2, start_y - 7.4 * line_height, "Facebook : Dory Ink Bali")
 
         c.showPage()
         c.save()
