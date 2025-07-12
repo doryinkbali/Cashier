@@ -12,7 +12,9 @@ SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive"
 ]
-SERVICE_ACCOUNT_FILE = "kasir-dory-ink-21121e51113d.json"
+SERVICE_ACCOUNT_FILE = "/tmp/service_account.json"
+with open(SERVICE_ACCOUNT_FILE, "w") as f:
+    f.write(st.secrets["SERVICE_ACCOUNT"])
 
 # ===== AUTHENTIKASI =====
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
