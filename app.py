@@ -17,7 +17,7 @@ SCOPES = [
 
 # ===== LOAD SERVICE ACCOUNT DARI STREAMLIT SECRETS =====
 with open("/tmp/service_account.json", "w") as f:
-    f.write(st.secrets["SERVICE_ACCOUNT"])
+    json.dump(st.secrets["SERVICE_ACCOUNT"], f)
 
 creds = Credentials.from_service_account_file("/tmp/service_account.json", scopes=SCOPES)
 client = gspread.authorize(creds)
